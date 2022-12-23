@@ -17,3 +17,8 @@ MANIFEST
 *.annoy
 *.idx
 *.hdf5
+
+*.DS_Store
+*.xcuserstate 
+*.xcworkspace
+**/xcuserdata/*
