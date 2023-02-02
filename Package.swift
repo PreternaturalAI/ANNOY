@@ -1,14 +1,13 @@
 // swift-tools-version: 5.7
-// The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-    name: "AnnoySwift",
+    name: "SpotifyANNOY",
     products: [
         .library(
-            name: "AnnoySwift",
-            targets: ["AnnoySwift"]
+            name: "SpotifyANNOY",
+            targets: ["SpotifyANNOY"]
         ),
     ],
     dependencies: [
@@ -30,8 +29,9 @@ let package = Package(
             ]
         ),
         .target(
-            name: "AnnoySwift",
-            dependencies: ["CAnnoy"]
+            name: "SpotifyANNOY",
+            dependencies: ["CAnnoy"],
+            path: "Sources"
         ),
     ],
     cxxLanguageStandard: .cxx20
