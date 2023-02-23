@@ -7,26 +7,34 @@ import Foundation
 
 public enum AnnoyIndexError: Error, LocalizedError {
     case invalidVectorLength(message: String)
-    case addItemFailed
-    case buildFailed
-    case unbuildFailed
-    case saveFailed
-    case loadFailed
+    
+    case failedToAddItem
+    
+    case failedToBuild
+    case failedToBuildOnDisk
+    case failedToUnbuild
+    
+    case failedToSave
+    case failedToLoad
+    
+    case unsupportedDataType(Any.Type)
     
     public var errorDescription: String? {
         switch self {
             case .invalidVectorLength(let message):
                 return message
-            case .addItemFailed:
+            case .failedToAddItem:
                 return "Adding item to index failed."
-            case .buildFailed:
+            case .failedToBuild, .failedToBuildOnDisk:
                 return nil
-            case .unbuildFailed:
+            case .failedToUnbuild:
                 return nil
-            case .saveFailed:
+            case .failedToSave:
                 return nil
-            case .loadFailed:
+            case .failedToLoad:
                 return nil
+            case .unsupportedDataType(let type):
+                return "Unsupported data type: \(type)"
         }
     }
 }

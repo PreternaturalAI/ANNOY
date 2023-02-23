@@ -3,11 +3,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "SpotifyANNOY",
+    name: "ANNOY",
     products: [
         .library(
-            name: "SpotifyANNOY",
-            targets: ["SpotifyANNOY"]
+            name: "ANNOY",
+            targets: ["ANNOY"]
         ),
     ],
     dependencies: [
@@ -29,7 +29,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "SpotifyANNOY",
+            name: "ANNOY",
             dependencies: ["CAnnoy"],
             path: "Sources"
         ),
