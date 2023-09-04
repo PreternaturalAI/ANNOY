@@ -7,14 +7,8 @@ Annoy
    :alt: Annoy example
    :align: center
 
-.. image:: https://img.shields.io/travis/spotify/annoy/master.svg?style=flat
-    :target: https://travis-ci.org/spotify/annoy
-
-.. image:: https://ci.appveyor.com/api/projects/status/github/spotify/annoy?svg=true&pendingText=windows%20-%20Pending&passingText=windows%20-%20OK&failingText=windows%20-%20Failing
-    :target: https://ci.appveyor.com/project/erikbern/annoy
-
-.. image:: https://img.shields.io/pypi/v/annoy.svg?style=flat
-   :target: https://pypi.python.org/pypi/annoy
+.. image:: https://github.com/spotify/annoy/actions/workflows/ci.yml/badge.svg
+    :target: https://github.com/spotify/annoy/actions
 
 Annoy (`Approximate Nearest Neighbors <http://en.wikipedia.org/wiki/Nearest_neighbor_search#Approximate_nearest_neighbor>`__ Oh Yeah) is a C++ library with Python bindings to search for points in space that are close to a given query point. It also creates large read-only file-based data structures that are `mmapped <https://en.wikipedia.org/wiki/Mmap>`__ into memory so that many processes may share the same data.
 
@@ -122,7 +116,7 @@ We do this k times so that we get a forest of trees. k has to be tuned to your n
 
 Hamming distance (contributed by `Martin Aumüller <https://github.com/maumueller>`__) packs the data into 64-bit integers under the hood and uses built-in bit count primitives so it could be quite fast. All splits are axis-aligned.
 
-Dot Product distance (contributed by `Peter Sobot <https://github.com/psobot>`__) reduces the provided vectors from dot (or "inner-product") space to a more query-friendly cosine space using `a method by Bachrach et al., at Microsoft Research, published in 2014 <https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/XboxInnerProduct.pdf>`__.
+Dot Product distance (contributed by `Peter Sobot <https://github.com/psobot>`__ and `Pavel Korobov <https://github.com/pkorobov>`__) reduces the provided vectors from dot (or "inner-product") space to a more query-friendly cosine space using `a method by Bachrach et al., at Microsoft Research, published in 2014 <https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/XboxInnerProduct.pdf>`__.
 
 
 
